@@ -9,7 +9,7 @@ import {
 import Home from '../../pages/Home';
 import About from '../../pages/About';
 import Contact from '../../pages/Contact';
-import Music from '../../pages/Music';
+import Crypto from '../../pages/Crypto';
 import Container from 'react-bootstrap/Container';
 
 const Layout = () => {
@@ -29,8 +29,8 @@ const Layout = () => {
                         <NavLink to='/contact' className='nav-link'>
                             Contact
                         </NavLink>
-                        <NavLink to='/music' className='nav-link'>
-                            Music
+                        <NavLink to='/crypto' className='nav-link'>
+                            Crypto
                         </NavLink>
                     </Nav>
                 </Navbar.Collapse>
@@ -40,7 +40,7 @@ const Layout = () => {
                     <Route path='/' exact component={Home} />
                     <Route path='/about' component={About} />
                     <Route path='/contact' component={Contact} />
-                    <Route path='/music' component={Music} />
+                    <Route path='/crypto' component={Crypto} />
                 </Switch>
             </Container>
         </Router>
