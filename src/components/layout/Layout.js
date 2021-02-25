@@ -20,21 +20,29 @@ const Layout = () => {
                 <Navbar.Toggle aria-controls='basic-navbar-nav' />
                 <Navbar.Collapse id='basic-navbar-nav'>
                     <Nav className='mr-auto'>
-                        <Nav.Link to='/' className='nav-link'>
+                        <NavLink to='/' className='nav-link'>
                             Home
-                        </Nav.Link>
-                        <Nav.Link to='/about' className='nav-link'>
+                        </NavLink>
+                        <NavLink to='/about' className='nav-link'>
                             About
-                        </Nav.Link>
-                        <Nav.Link to='/contact' className='nav-link'>
+                        </NavLink>
+                        <NavLink to='/contact' className='nav-link'>
                             Contact
-                        </Nav.Link>
-                        <Nav.Link to='/music' className='nav-link'>
+                        </NavLink>
+                        <NavLink to='/music' className='nav-link'>
                             Music
-                        </Nav.Link>
+                        </NavLink>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
+            <Container>
+                <Switch>
+                    <Route path='/' exact component={Home} />
+                    <Route path='/about' component={About} />
+                    <Route path='/contact' component={Contact} />
+                    <Route path='/music' component={Music} />
+                </Switch>
+            </Container>
         </Router>
     );
 };
